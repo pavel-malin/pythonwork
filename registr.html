@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN-RU" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<body>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style/style1.css" class="layot">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon"  href="imags/IMG_0221.JPG"  type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<input name='login' type='text'>
+<input type='submit' name='submit' value='изменить'>
+</form>
+<br>
+<h2>Пользователь "<?php echo    $myrow['login']; ?>"</h2>
+<form action='php/update_user.php'    method='post'>
+    Изменить пароль:<br>
+    <input name='password' type='password'>
+    <input type='submit' name='submit' value='изменить'>
+</form>
+<br>
+<form action='php/update_user.php'    method='post' enctype='multipart/form-data'>
+    Ваш аватар:<br>
+    <img alt='аватар' src='$myrow[avatar]'><br>
+    Изображение должно быть    формата jpg, gif или png. Изменить аватар:<br>
+    <input type="FILE"    name="fupload">
+    <input type='submit' name='submit' value='изменить'>
+</form>
+<br>
+<h2>Личные    сообщения:</h2>
+<img alt='аватар' src='$myrow[avatar]'><br>
+<form action='php/post.php' method='post'>
+    <br>
+    <h2>Отправить Ваше    сообщение:</h2>
+    <textarea cols='43' rows='4'    name='text'></textarea><br>
+    <input type='hidden' name='poluchatel'    value='$myrow[login]'>
+    <input type='hidden' name='id'    value='$myrow[id]'>
+    <input type='submit' name='submit' value='Отправить'>
+
+</form>
+<table>
+    <tr>
+
+        <td><a href='php/page.php?id=%s'><img alt='аватар'    src='%s'></a></td>
+
+        <td>Автор:    <a href='php/page.php?id=%s'>%s</a><br>
+            Дата:    %s<br>
+            Сообщение:<br>
+
+            %s<br>
+            <a href='php/drop_post.php?id=%s'>Удалить</a>
+
+
+        </td>
+    </tr>
+</table>
+</body>

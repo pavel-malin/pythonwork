@@ -1,0 +1,139 @@
+HTML {
+    background-color: white;
+    background-size: auto;
+    height: 100%;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.div.gallery {
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+    width: 180px;
+}
+
+.div.gallery:hover {
+    border: 1px solid black;
+}
+
+.div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    .img.bg {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+}
+
+
+/*noinspection ALL*/
+.child{
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+/*
+    Created on : 04.02.2014, 18:54:37
+    Author     : seyfer
+*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: black}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.text-color {
+    color: white;
+    display: inline-block;
+    padding: 12px 16px;
+    text-decoration: none;
+    min-width: 1400px;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+    text-align: left;
+
+
+}
+
+.laravel-icon {
+    background: url("IMG_0221.JPG") no-repeat left center;
+    background-size: 64px;
+    display: inline-block;
+    vertical-align: bottom;
+    padding-left: 64px;
+    background-color: black;
+
+}
